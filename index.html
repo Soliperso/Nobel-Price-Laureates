@@ -1,18 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Nobel Price Laureats</title>
+    <title>Nobel Price Laureates</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
+
+
+<!-- Header -->
+
 <body>
-    
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12 main">
+                <div class="jumbotron">
+                    <h1 class="text-center">Nobel Prize Laureates</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-lg-8">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat excepturi porro alias recusandae
+                    consectetur minus animi dicta impedit dolorum sapiente possimus veniam deserunt quasi fuga, quos
+                    architecto ut cupiditate sequi quisquam rem enim ipsa in a iure. Suscipit commodi, nisi qui deserunt
+                    molestias sapiente tenetur porro minima quasi, neque ex. Incidunt, dicta quibusdam officia ex, minus
+                    saepe quam consectetur ea, optio sequi soluta alias possimus illum! Deserunt commodi repudiandae
+                    quis dicta ducimus, fugiat officiis, consectetur assumenda ipsum id architecto? Natus amet,
+                    voluptate dolores quisquam ea minus repudiandae, sed tempore magnam est pariatur saepe. Itaque
+                    repudiandae, laboriosam similique, placeat accusantium aut voluptate aspernatur dolorum sed earum
+                    cupiditate error. Repellat, molestiae? Nihil possimus voluptatibus autem dolorem inventore odit
+                    saepe harum exercitationem ex?</p>
+            </div>
+
+
+            <!-- Form -->
+            <div class="col-lg-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Search Terms</h4>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="year">Year</label>
+                                <input type="text" class="form-control" id="year">
+                            </div>
+                            <div class="form-group">
+                                <label for="yearTo">YearTo</label>
+                                <input type="text" class="form-control" id="yearTo">
+                            </div>
+                            <div class="form-group">
+                                <label for="category">Category</label>
+                                <input type="text" class="form-control" id="category">
+                            </div>
+                            <div class="form-group">
+                                <label for="numberOfLaureates">Number of Laureates</label>
+                                <select class="custom-select" id="numberOfLaureates">
+                                    <option selected>Choose...</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                </select>
+                            </div>
+                    </div>
+                    </form>
+                    <button type="submit" class="btn btn-outline-success" id="submitBtn">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div id='para'>
+        <p>Everything happening around me is very random. I am enjoying the phase, as the journey is far more enjoyable than the destination.
+            Read more at: https://www.brainyquote.com/topics/random</p>
+    </div> -->
+    <div class="card-body">
+        <div id='category-div'></div> <hr>
+    </div>
+
+    <!-- Text to be translated -->
+    <p id="para"></p>
+    <!-- <p id="para"></p> -->
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <footer>
+                    <small class="text-center">&copy; 2019</small>
+                </footer>
+            </div>
+        </div>
+    </div>
 
 
 
-    <script   src="https://code.jquery.com/jquery-3.4.1.min.js"   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="   crossorigin="anonymous"></script>
+
+
+
+    <!-- Links -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="./assets/javascript/app.js"></script>
 </body>
+
 </html>
+
+
+
+<!-- <div id='para'>
+        <p>Everything happening around me is very random. I am enjoying the phase, as the journey is far more enjoyable than the destination.
+            Read more at: https://www.brainyquote.com/topics/random</p>
+    </div>
+
+<div id='category'></div> -->
