@@ -1,8 +1,86 @@
+/********************************
+    GENERAL
+**********************************/
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(rgba(192, 157, 76, 0.2), rgba(192, 157, 76, 0.6)), url('../images/bgImage.jpeg') no-repeat;
+    background-size: cover;
+}
+
+
+/********************************
+    JUMBOTRON
+**********************************/
+.jumbotron {
+    background-color: #C79D3D;
+    border-radius: 0;
+    border-bottom: 3px solid #fff;
+}
+
+.jumbotron h1 {
+    text-shadow: 1px 2px 5px #fff;
+    
+}
+
 .main {
     padding-right: 0;
     padding-left: 0;
 }
 
-.jumbotron {
-    border-radius: 0;
+
+/********************************
+    GENERAL
+**********************************/
+#submitBtn {
+    border-color: #C79D3D;
+    color: #C79D3D;
+}
+
+#submitBtn:hover {
+    background-color: #C79D3D;
+    color: #fff; 
+}
+
+
+/********************************
+    PERSON DISPLAY CONTENT
+**********************************/
+.personInfoDisplay, 
+p#para {
+    margin-top: 30px;
+    background-color: rgba(238, 205, 127, .2);
+}
+
+p#para {
+    padding: 20px;
+}
+
+
+/********************************
+    FORM
+**********************************/
+.form {
+    border: 3px solid #fff;
+    background-color: #ECE2CA;
+}
+
+
+/********************************
+    FOOTER
+**********************************/
+footer {
+    border-top: 5px solid #f3f3f3;;
+    background-color: #C79D3D;
+    margin: 0;
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+}
+
+
+.footerCol {
+    padding-right: 0;
+    padding-left: 0;
 }

@@ -19,30 +19,25 @@ $('#submitBtn').on('click', function(event) {
         for(let i = 0; i < response.prizes.length; i++) {
             let category = 'Category: ' + response.prizes[i].category;
             for (let j = 0; j < response.prizes[i].laureates.length; j++) {
-                let firstName = 'First Name: ' + response.prizes[i].laureates[j].firstname;
-                let surname = 'Surname: ' + response.prizes[i].laureates[j].surname;
-                let motivation = 'Motivation: ' + response.prizes[i].laureates[j].motivation;
+                let firstName = response.prizes[i].laureates[j].firstname;
+                let surname = response.prizes[i].laureates[j].surname;
+                let motivation = response.prizes[i].laureates[j].motivation;
                 let numberOfLaureates = 'Number of Laureates: ' + response.prizes[i].laureates[j].share;
                 
     
+                let divContainer = $('<div>').attr('class', 'persInfo');
+                let h5first = $('<h5>').text(`First Name: ${firstName}`);
+                let h5Surname = $('<h5>').text(`Surname: ${surname}`);
+                let pMotivation = $('<p>').text(`Motivation: ${motivation}`);
+                let pNumberOfLaureates = $('<p>').text(`Number of Laureates: ${numberOfLaureates}`);
 
-                console.log(firstName);
-                console.log(surname);
-                console.log(category);
-                console.log(motivation);
-                console.log(numberOfLaureates);
-                console.log('==================================================');
-
-                $('#category-div').append( 
-                    $('<p>').text(firstName),
-                    $('<p>').text(surname),
-                    $('<p>').text(category),
-                    $('<p>').text(numberOfLaureates),
-                    $('<p>').text(motivation),
-                ); 
-                $('#category').append( $('<p>').text(firstName));  
-                let para = $('#category').append( $('<h4>').text('First Name:'));  
-                console.log(para.append($('<p>').text(firstName)));
+                divContainer.append(h5first);
+                divContainer.append(h5Surname);
+                divContainer.append(pMotivation);
+                divContainer.append(pNumberOfLaureates);
+                
+                console.log($('#category-div').append(divContainer));
+                
                 trans(motivation)
             }
         }
@@ -60,7 +55,11 @@ function trans(motivation) {
         url: queryURL,
         method: 'GET'
     }).then(function(response) {
-        $('#para').append($('<p>').text(response.text));         
+        let para = $('#para');
+        let pTrans = $('<div>').attr('class', 'textTraslated');
+        para.append(pTrans);
+        let pText = $('<p>').text(response.text)
+        para.append(pText);       
     });
 }
 
